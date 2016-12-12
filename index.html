@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myFirstApp">
         <head>
                 <meta charset="utf-8">
+                <script src="angular.js"></script>
+                <script src="app.js"></script>
                 <title>AngularJS Course</title>
         </head>
         <body>
-                <h1>Angular JS Atom</h1>
+                <h1>Angular JS Atom </h1>
+
+                <div ng-controller="myFirstController">
+                  <div>
+                    {{ variable }}
+                    {{ sayHello() }}
+
+                    <input type="text" ng-model="variable"></input>
+                    inside my input ois {{ variable }}
+                  </div>
+                  <div ng-controller="nameCalculator">
+                    <h1>Name Calculator</h1>
+                    <div>
+                      Your name please:
+                      <input type="text" ng-model="namePC" ng-keyup="displayNumeric();">
+                    </div>
+                    <div> Total Numeric value of person's name is :
+                    {{totalValue}}</div>
+                  </div>
+                </div>
+
         </body>
 </html>
